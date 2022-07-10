@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Page</title>
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+
+        }
+
+        body {
+            background-color: rgb(219, 219, 221);
+        }
+
+        h1 {
+            color: white;
+            font-family: serif;
+            background-color: rgb(103, 103, 250);
+            text-align: center;
+            padding: 30px 1px;
+        }
+
+        ul{
+            display: flex;
+            border-top:4px solid white;
+            list-style: none;
+            padding: 10px 1px;
+            background-color:rgb(163, 182, 248);
+        }
+        ul li a{
+            text-decoration: none;
+            font-size: larger;
+            font-family: Cambria;
+            font-weight: bold;
+            padding: 10px 12px;
+            color:rgb(92, 36, 36);
+            transition: all .4s;           
+        }
+
+       #l1, a:hover{
+            color: white;
+            /* background-color:rgb(172, 129, 253); */
+            /* border-top: 4px solid rgb(24, 44, 99); */
+            
+        }
+       #l1{
+            color: white;
+            background-color:rgb(172, 129, 253);
+            border-top: 4px solid rgb(24, 44, 99);
+            
+        }
+        a:active{
+            color:black;            
+        }
+   .box{
+       margin: 30px 0px;
+       display: flex;
+       justify-content: center;
+   }
+    
+   table,td,th,input,select{
+       text-align: left;
+       font-size: large;
+       font-family: Cambria;
+       font-weight: bolder;
+       padding: 5px 30px;
+       margin: 1px 5px;
+       border-radius: 4px;
+   }
+   form{
+        padding: 5px 1px;
+       border: 4px outset rgb(76, 74, 190);
+       border-radius: 12px;
+   }
+    caption{
+        font-size: 3rem;
+        text-shadow: 2px 2px 4px black;
+        margin: 6px;
+        color: blueviolet;
+    }
+  
+   </style>
+</head>
+
+<body>
+    <h1>ADMIN PAGE</h1>
+     <ul>
+         <li><a id="l1" href="#">AddStudent</a></li>
+         <li><a href="addResultofstudent.jsp">AddResult</a></li>
+         <li><a href="showStudent.jsp">ShowStudent</a></li>
+         <li><a href="showResult.jsp">ShowResult</a></li>
+         <li><a  href="Graph.jsp">Graph</a></li>
+         <li><a href="index.html">Logout</a></li>
+     </ul>
+     <div class="box">
+     <form action="addStudent.jsp" method="post">
+     <table>
+         <caption>Add Student</caption>
+
+         <tr>
+             <th>Enrollment No :</th>
+             <td><input type="text" name="senroll"  required></td>
+         </tr>  
+         
+         <tr>
+             <th>Name :</th>
+             <td><input type="text" name="sname" required></td>
+         </tr>  
+         <tr>
+            <th>Gender:</th>
+            <td><input type="radio" name="gender" value="Male">Male<input type="radio" name="gender" value="Female">Female<input type="radio" name="gender" value="Other">Other</td>
+        </tr>
+        <tr>
+        
+         <tr>
+             <th>Department :</th>
+             <td><select id="depart" name="sdepart" required>
+                 <option value="">------Select Department-------</option>
+                 <option value="Computer Engineering">Computer Engineering</option>
+                 <option value="Civil Engineering">Civil Engineering</option>
+                 <option value="Mechanical Engineering">Mechanical Engineering</option>
+                 <option value="Automobile Engineering">Automobile Engineering</option>
+                 <option value="Electrical Engineering">Electrical Engineering</option>
+                 <option value="Biomedical Engineering">Biomedical Engineering</option>
+                 <option value="Information Technology">Information Technology</option>
+                 <option value="Electronics Engineering">Electronics Engineering</option>
+             </select>
+            </td>
+<!--                 <input type="text" name="sdepart" required></td>-->
+         </tr>  
+
+         <tr>
+             <th>Semester :</th>
+             <td><select id="sem" name="sem">
+                 <option value="">--------Select Semester---------</option>
+                 <option value="1">Sem 1</option>
+                 <option value="2">Sem 2</option>
+                 <option value="3">Sem 3</option>
+                 <option value="4">Sem 4</option>
+                 <option value="5">Sem 5</option>
+                 <option value="6">Sem 6</option>
+                 <option value="7">Sem 7</option>
+                 <option value="8">Sem 8</option>
+             </select>
+            </td>
+         </tr>  
+
+         <tr>
+            <th>City :</th>
+            <td><input type="text" name="scity" required></td>
+        </tr> 
+        
+            <th></th>
+            <td><input type="submit"  value="Add"><input type="reset"></td>
+        </tr> 
+
+     </table>
+     </form>
+    </div>
+</body>
+
+</html>
